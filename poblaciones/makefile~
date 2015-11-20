@@ -1,0 +1,10 @@
+n_steps = 20000
+n_burn = 5000
+
+all: mcmc_loktavolterra.pdf
+
+mcmc_loktavolterra.pdf: mcmc_loktavolterra.py
+	python mcmc_loktavolterra.py $(n_steps) $(n_burn)
+
+clean:
+	rm -f mcmc_loktavolterra.pdf
